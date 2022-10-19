@@ -44,8 +44,8 @@ const calcGame = () => {
             wins += 1;
             console.log('Correct!');
         } else {
-            wins = 0;
             console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+            return;
         }
     }
     console.log(`Congratulations, ${name}!`);
