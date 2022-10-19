@@ -6,7 +6,9 @@ const evenGame = () => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
     let wins = 0;
-    while (wins !== 3) {
+    const winsForEnd = 3;
+
+    while (wins < winsForEnd) {
         const question = Math.round(Math.random() * 10);
         const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
 

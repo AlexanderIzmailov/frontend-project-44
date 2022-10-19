@@ -1,6 +1,4 @@
-import { askQuestion, greeting } from './index.js';
-
-const randomIntFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+import { askQuestion, greeting, randomIntFromInterval } from './index.js';
 
 const createQuestion = () => {
     const n1 = Math.round(Math.random() * 10);
@@ -35,7 +33,9 @@ const calcGame = () => {
     console.log('What is the result of the expression?');
 
     let wins = 0;
-    while (wins !== 3) {
+    const winsForEnd = 3;
+
+    while (wins < winsForEnd) {
         const [question, correctAnswer] = createQuestion();
 
         const userAnswer = askQuestion(question);

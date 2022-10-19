@@ -13,8 +13,9 @@ const gcdGame = () => {
     console.log('Find the greatest common divisor of given numbers.');
 
     let wins = 0;
+    const winsForEnd = 3;
 
-    while (wins !== 3) {
+    while (wins < winsForEnd) {
         const n1 = Math.round(Math.random() * 100);
         const n2 = Math.round(Math.random() * 100);
 
