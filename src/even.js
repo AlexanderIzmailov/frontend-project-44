@@ -1,4 +1,4 @@
-import { askQuestion, greeting } from './index.js';
+import { askQuestion, greeting, randomIntFromInterval} from './index.js';
 
 const evenGame = () => {
     const name = greeting();
@@ -9,7 +9,7 @@ const evenGame = () => {
     const winsForEnd = 3;
 
     while (wins < winsForEnd) {
-        const question = Math.round(Math.random() * 10);
+        const question = randomIntFromInterval(1, 100);
         const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
 
         const userAnswer = askQuestion(question);
